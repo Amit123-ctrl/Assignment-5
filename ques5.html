@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 5</title>
+</head>
+<body>
+    <form action="#">
+        <fieldset>
+            <legend>Academic information</legend>
+            <label for="Choice"></label>Degree
+            <select>
+                <option value="M.B.A.">Master of Business Administration</option>
+                <option value="M.C.A.">Master of Computer Applications</option>
+            </select><br>
+           <label for="id">Student ID</label> 
+           <input type="text" name="id"><br>
+           <label for="cla">Classes attended</label>
+           <select multiple>
+             <option value="Geo">Geography</option>
+             <option value="math">Mathematics</option>
+             <option value="eng">English</option>
+           </select>
+        </fieldset>
+
+        <fieldset>
+            <legend>Personal Details</legend>
+            <label for="fn">First Name</label>
+            <input type="text" name="fn"><br>
+            <label for="ln">Last Name</label>
+            <input type="text"><br>
+            <label for="GEnder">Gender</label>
+            <input type="radio" name="gen"> Male
+            <input type="radio" name="gen"> Female
+            <br>
+            <label for="email">Email</label>
+            <input type="email" required placeholder="Plese enter the email">
+        </fieldset><br>
+        <textarea name="comment" style="width: 300px; height: 80px;">TERMS AND CONDITIONS... </textarea>
+        <br>
+        <input type="submit" value="Send Form">
+        <input type="reset" value="Clear Form">
+    </form>
+</body>
+</html>

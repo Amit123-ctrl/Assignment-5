@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wedding Request Form</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+input[type="time"],
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.name-field {
+    display: flex;
+    gap: 10px;
+}
+
+.name-field input {
+    flex: 1;
+}
+
+.city-region,
+.postal-country {
+    display: flex;
+    gap: 10px;
+}
+
+button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #555;
+}
+    </style>
+</head>
+<body>
+
+    <h1>Wedding Request Form</h1>
+
+    <form action="#" method="POST">
+        <!-- Wedding Date -->
+        <label for="wedding-date">Wedding Date*</label>
+        <input type="date" id="wedding-date" name="wedding-date" required>
+
+        <!-- Date Confirmation with WABC Pastoral Office -->
+        <label for="confirmed">Has your date been confirmed with WABC pastoral office?*</label>
+        <select id="confirmed" name="confirmed" required>
+            <option value="" disabled selected>Please select one</option>
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+        </select>
+
+        <!-- Wedding Time -->
+        <label for="wedding-time">Wedding Time*</label>
+        <input type="time" id="wedding-time" name="wedding-time" required>
+
+        <!-- Name -->
+        <label for="first-name">Name*</label>
+        <div class="name-field">
+            <input type="text" id="first-name" name="first-name" placeholder="First" required>
+            <input type="text" id="last-name" name="last-name" placeholder="Last" required>
+        </div>
+
+        <!-- Membership of Wheeler -->
+        <label for="wheeler">Are you a member of Wheeler?*</label>
+        <select id="wheeler" name="wheeler" required>
+            <option value="" disabled selected>Please select one</option>
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+        </select>
+
+        <!-- Phone Number -->
+        <label for="phone">Phone*</label>
+        <input type="tel" id="phone" name="phone" placeholder="### ### ####" required maxlength="10">
+
+        <!-- Alternate Number -->
+        <label for="alternate-phone">Alternate Number</label>
+        <input type="tel" id="alternate-phone" name="alternate-phone">
+
+        
+        <label for="contact-time">Best Time To Contact*</label>
+        <select id="contact-time" name="contact-time" required>
+            <option value="" disabled selected>Please select one</option>
+            <option value="morning">Morning</option>
+            <option value="afternoon">Afternoon</option>
+            <option value="evening">Evening</option>
+        </select>
+
+        <label for="email">Email*</label>
+        <input type="email" id="email" name="email" required>
+
+      
+        <label for="address">Address</label>
+        <input type="text" id="address" name="address" placeholder="Street Address">
+        <input type="text" id="address2" name="address2" placeholder="Street Address Line 2">
+        <div class="city-region">
+            <input type="text" id="city" name="city" placeholder="City">
+            <input type="text" id="region" name="region" placeholder="Region">
+        </div>
+        <div class="postal-country">
+            <input type="text" id="postal" name="postal" placeholder="Postal / Zip Code">
+            <select id="country" name="country">
+                <option value="romania">Romania</option>
+               
+            </select>
+        </div>
+
+        <label for="reception">Will the reception be held at WABC?*</label>
+        <select id="reception" name="reception" required>
+            <option value="" disabled selected>Please select one</option>
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+        </select>
+
+       
+        <label for="reception-time">If "Yes", please note the time of reception.</label>
+        <input type="time" id="reception-time" name="reception-time">
+
+        <label for="mail-info">Would you like to receive information in the mail?*</label>
+        <select id="mail-info" name="mail-info" required>
+            <option value="" disabled selected>Please select one</option>
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+        </select>
+
+ 
+        <button type="submit">Send</button>
+    </form>
+
+</body>
+</html>
